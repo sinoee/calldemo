@@ -70,9 +70,10 @@ Gui, main:font, s10, Verdana ;设置字体
 ;Gui, main:Flash  ;来电时编辑框变换颜色
 Gui, main:Add, edit, x2 y2 w148 h26 -Multi vphone,
 Gui, main:Add, Picture, x148 y1 w30 h27 gcall vcall, % bt.call ? "call.png" : "hangup.png"
-Gui, main: -Caption +ToolWindow +AlwaysOnTop +Hwndmainhwnd +Owner
+Gui, main: -Caption +ToolWindow +AlwaysOnTop +LastFound +Hwndmainhwnd +Owner
 Gui, main:Default
-Gui, main:Show, w180 h32,
+Gui, main:Show, % "x" A_ScreenWidth-240 " y80 w180 h32",
+;Gui, main:Show, w180 h32,
 return
 
 call:
